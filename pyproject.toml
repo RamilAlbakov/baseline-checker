@@ -6,9 +6,17 @@ authors = ["Ramil Albakov <ralbakov10@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+enm-client-scripting = {path = "../enm_client_scripting-1.20.1-py2.py3-none-any.whl"}
+python-dotenv = "^0.20.0"
+dictdiffer = "^0.9.0"
+openpyxl = "^3.0.10"
 
 [tool.poetry.dev-dependencies]
 wemake-python-styleguide = "^0.16.1"
+ipython = "^8.4.0"
+
+[tool.poetry.scripts]
+check-enm-gsm = "baseline_checker.scripts.check_enm_gsm:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
